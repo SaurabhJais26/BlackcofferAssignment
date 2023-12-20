@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tooltip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tooltip_bg"
+    android:padding="5dp"
+    android:textColor="@android:color/white"
+    android:gravity="center_horizontal"
+    android:text="1"
+    android:translationY="-.2dp"
+    android:translationX="-.1dp"
+    android:layout_gravity="center_horizontal"
+    android:visibility="gone"/>

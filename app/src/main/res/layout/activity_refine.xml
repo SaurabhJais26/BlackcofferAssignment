@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@color/white"
+        android:background="#0E2E43"
+        android:elevation="4dp">
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/back_btn"
+            android:contentDescription="Back"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refine"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Select Your Availability Text Field with Horizontal Dropdown -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select your availability"
+                android:textColor="@color/blueWhale"
+                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/availability_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/blueWhale"
+                android:text="Add Your Status"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/textColor"
+                        android:text="Hi community I am open to new Connections  &quot;😊&quot;"
+                        android:background="@drawable/round_rec_shape"
+                        android:maxLines="5"
+                        android:maxLength="250"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/characterCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="47/250"
+                    android:textColor="@color/blueWhale"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/distanceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/blueWhale"
+                android:text="Select Hyperlocal Distance"
+                />
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="14dp">
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="35dp"
+                    android:max="100"
+                    android:progress="0" />
+
+                <include layout="@layout/tooltip_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+               android:orientation="horizontal">
+               <TextView
+                   android:id="@+id/distance_text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="start"
+                   android:textColor="@color/blueWhale"
+                   android:text="1 Km"/>
+               <TextView
+                   android:id="@+id/endDistance"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:textColor="@color/blueWhale"
+                   android:text="100 Km"/>
+           </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/blueWhale"
+                android:text="Select Purpose"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                >
+
+                <Button
+                    android:id="@+id/coffee_button"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:background="@drawable/button_selector"
+                    android:text="Coffee" />
+
+                <Button
+                    android:id="@+id/business_button"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@+id/coffee_button"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:background="@drawable/button_selector"
+                    android:text="Business" />
+
+                <Button
+                    android:id="@+id/hobbies_button"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@+id/business_button"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:background="@drawable/button_selector"
+                    android:text="Hobbies" />
+
+                <Button
+                    android:id="@+id/friendship_button"
+                    android:layout_toRightOf="@+id/hobbies_button"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="11sp"
+                    android:text="Friendship"
+                    android:background="@drawable/button_selector"/>
+
+                <Button
+                    android:id="@+id/movies_button"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@+id/coffee_button"
+                    android:textSize="11sp"
+                    android:text="Movies"
+                    android:background="@drawable/button_selector"/>
+
+                <Button
+                    android:id="@+id/dining_button"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@+id/business_button"
+                    android:layout_toRightOf="@id/movies_button"
+                    android:textSize="11sp"
+                    android:text="Dining"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_selector" />
+
+
+                <Button
+                    android:id="@+id/dating_button"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/hobbies_button"
+                    android:layout_toRightOf="@+id/dining_button"
+                    android:text="Dating"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/button_selector"/>
+
+                <Button
+                    android:id="@+id/matrimony_button"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/friendship_button"
+                    android:layout_toRightOf="@+id/dating_button"
+                    android:text="Matrimony"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/button_selector"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Save &amp; Explore"
+                    android:background="@drawable/round_button"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

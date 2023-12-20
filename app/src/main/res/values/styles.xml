@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/blueWhale</item>
+        <item name="colorPrimary">@color/blueWhale</item>
+        <item name="colorPrimaryDark">@color/spaceCadet</item>
+        <item name="colorAccent">@color/regalBlue</item>
+
+    </style>
+    <style name="CustomSeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/custom_seekbar_progress</item>
+        <item name="android:thumb">@drawable/custom_seekbar_thumb</item>
+        <item name="android:indeterminateOnly">false</item>
+    </style>
+
+</resources>

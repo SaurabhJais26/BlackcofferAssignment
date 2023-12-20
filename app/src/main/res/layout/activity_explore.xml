@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueWhale">
+
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/menuicon"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/greetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingStart="20dp"
+            android:layout_toEndOf="@id/menuIcon"
+            android:text="Howdy Saurabh Jaiswal !!"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:drawableLeft="@drawable/location"
+            android:text="Sector 6, Noida"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/greetingText"
+            android:layout_toEndOf="@id/menuIcon" />
+
+        <ImageView
+            android:id="@+id/refineIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/refine_icon" />
+        <TextView
+            android:id="@+id/refineText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refine"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:layout_below="@+id/refineIcon"
+            android:layout_marginEnd="10dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/spaceCadet">
+
+        <Button
+            android:id="@+id/personalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Personal"
+            android:background="@color/spaceCadet"
+            android:textColor="@color/white"
+            android:gravity="center"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/businessButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Business"
+            android:background="@color/spaceCadet"
+            android:textColor="@color/white"
+            android:gravity="center"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/merchantButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Merchant"
+            android:textColor="@color/white"
+            android:background="@color/spaceCadet"
+            android:gravity="center"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="2"
+            android:hint="Search"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="14sp"
+        />
+
+
+        <ImageView
+            android:id="@+id/filterIcon"
+            android:layout_weight=".4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/filter"
+             />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottonnav"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/scroll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="40dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/profileName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="20dp"
+                                android:text="Kuldeep Singh"
+                                android:textColor="@color/blueWhale"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/profileAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New Delhi | Student"
+                                android:textColor="#275D7F"
+                                android:layout_marginStart="50dp"
+                                android:textSize="14sp"
+                                android:layout_below="@id/profileName"
+                                android:layout_marginTop="4dp" />
+
+                            <TextView
+                                android:id="@+id/profileDistance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Within 600-700m"
+                                android:textColor="@color/blueWhale"
+                                android:textSize="14sp"
+                                android:layout_marginStart="50dp"
+                                android:layout_below="@id/profileAddress"
+                                android:layout_marginTop="4dp" />
+
+                            <SeekBar
+                                android:id="@+id/profileProgressBar"
+                                android:layout_width="180dp"
+                                android:layout_height="15dp"
+                                android:layout_below="@id/profileDistance"
+                                android:layout_marginTop="8dp"
+                                android:progress="50"
+                                android:layout_marginStart="20dp"
+                                style="@style/CustomSeekBar" />
+
+
+                            <TextView
+                                android:id="@+id/profileInterests"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Coffee | Business | Friendship | Dating | Movies |\n Hobbies"
+                                android:textSize="12sp"
+                                android:textColor="@color/blueWhale"
+                                android:layout_below="@id/profileProgressBar"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="8dp" />
+
+                            <TextView
+                                android:id="@+id/profileAboutMe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/textColor"
+                                android:text="Hi community! I am open to new connections \n&quot;😊&quot;"
+                                android:textSize="13sp"
+                                android:layout_below="@id/profileInterests"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="40dp"
+                        app:cardCornerRadius="30dp"
+                        android:id="@+id/ppCardView1">
+                        <ImageView
+                            android:id="@+id/profileImage"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/userprofile"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignTop="@+id/card_view2"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <Button
+                        android:id="@+id/inviteButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+ INVITE"
+                        android:clickable="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/blueWhale"
+                        android:background="@color/white"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="25dp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/scroll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/scroll1"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="40dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/profileName2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="20dp"
+                                android:text="Saurabh"
+                                android:textColor="@color/blueWhale"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/profileAddress2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/profileName2"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="4dp"
+                                android:text="New Delhi | Teacher"
+                                android:textColor="@color/textColor"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/profileDistance2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Within 600-700m"
+                                android:textColor="@color/blueWhale"
+                                android:textSize="14sp"
+                                android:layout_marginStart="50dp"
+                                android:layout_below="@id/profileAddress2"
+                                android:layout_marginTop="4dp" />
+
+                            <SeekBar
+                                android:id="@+id/profileProgressBar2"
+                                android:layout_width="180dp"
+                                android:layout_height="15dp"
+                                android:layout_below="@id/profileDistance2"
+                                android:layout_marginTop="8dp"
+                                android:progress="50"
+                                android:layout_marginStart="30dp"
+                                style="@style/CustomSeekBar" />
+
+
+                            <TextView
+                                android:id="@+id/profileInterests2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Coffee | Business | Friendship | Dating | Movies |\n Hobbies"
+                                android:textSize="12sp"
+                                android:textColor="@color/blueWhale"
+                                android:layout_below="@id/profileProgressBar2"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="8dp" />
+
+                            <TextView
+                                android:id="@+id/profileAboutMe2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/textColor"
+                                android:text="Hi community! I am open to new connections \n&quot;😊&quot;"
+                                android:textSize="13sp"
+                                android:layout_below="@id/profileInterests2"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp" />
+
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="40dp"
+                        app:cardCornerRadius="30dp"
+                        android:id="@+id/ppCardView">
+                        <ImageView
+                            android:id="@+id/profileImage2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/userprofile"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignTop="@+id/card_view2"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <Button
+                        android:id="@+id/inviteButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+ INVITE"
+                        android:clickable="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/blueWhale"
+                        android:background="@color/white"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="25dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/scroll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/scroll2"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="40dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/profileName3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="20dp"
+                                android:text="Abhya"
+                                android:textColor="@color/blueWhale"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/profileAddress3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/profileName3"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginTop="4dp"
+                                android:text="New Delhi | Teacher"
+                                android:textColor="@color/textColor"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/profileDistance3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Within 600-700m"
+                                android:textColor="@color/blueWhale"
+                                android:textSize="14sp"
+                                android:layout_marginStart="50dp"
+                                android:layout_below="@id/profileAddress3"
+                                android:layout_marginTop="4dp" />
+
+                            <SeekBar
+                                android:id="@+id/profileProgressBar3"
+                                android:layout_width="180dp"
+                                android:layout_height="15dp"
+                                android:layout_below="@id/profileDistance3"
+                                android:layout_marginTop="8dp"
+                                android:progress="50"
+                                android:layout_marginStart="30dp"
+                                style="@style/CustomSeekBar" />
+
+
+                            <TextView
+                                android:id="@+id/profileInterests3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Coffee | Business | Friendship | Dating | Movies |\n Hobbies"
+                                android:textSize="12sp"
+                                android:textColor="@color/blueWhale"
+                                android:layout_below="@id/profileProgressBar3"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="8dp" />
+
+                            <TextView
+                                android:id="@+id/profileAboutMe3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/textColor"
+                                android:text="Hi community! I am open to new connections \n&quot;😊&quot;"
+                                android:textSize="13sp"
+                                android:layout_below="@id/profileInterests3"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp" />
+
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="40dp"
+                        app:cardCornerRadius="30dp"
+                        android:id="@+id/ppCardVie3">
+                        <ImageView
+                            android:id="@+id/profileImage3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/userprofile"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignTop="@+id/card_view3"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <Button
+                        android:id="@+id/inviteButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+ INVITE"
+                        android:clickable="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/blueWhale"
+                        android:background="@color/white"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="25dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu="@menu/menu"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:id="@+id/bottonnav"
+            >
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </RelativeLayout>
+</LinearLayout>

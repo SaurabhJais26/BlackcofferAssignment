@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Triangle at the bottom -->
+    <item android:bottom="12dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blueWhale" />
+        </shape>
+    </item>
+
+    <!-- Rectangle at the top -->
+    <item android:top="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blueWhale" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#CCC9C9</color>
+    <color name="blueWhale">#0E2E43</color>
+    <color name="textColor">#275D7F</color>
+    <color name="iconColor">#860F527E</color>
+    <color name="spaceCadet">#153C59</color>
+    <color name="regalBlue">#203C51</color>
+</resources>
